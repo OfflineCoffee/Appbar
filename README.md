@@ -37,23 +37,6 @@ For more information and detailed instructions, click "Help & instructions for f
 ## Changelog
 To see some of the major new features in the latest Taskbar release, visit the [changelog](https://github.com/farmerbb/Taskbar/blob/master/CHANGELOG.md).
 
-## Download
-Taskbar can be downloaded as a standalone Android app from:
-
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-      alt="Google Play"
-      height="80"
-      align="middle">](https://play.google.com/store/apps/details?id=com.farmerbb.taskbar)
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
-      alt="F-Droid"
-      height="80"
-      align="middle">](https://f-droid.org/packages/com.farmerbb.taskbar/)
-
-Taskbar is also included as part of the following Android distributions for PCs:
-
-* Android-x86 (7.1-rc2 and later) (http://www.android-x86.org)
-* Bliss OS (x86 builds) (https://blissroms.com)
-
 ## How to Build
 Prerequisites:
 * Windows / MacOS / Linux
@@ -66,40 +49,3 @@ Once all the prerequisites are met, make sure that the `ANDROID_HOME` environmen
 ### Running tests
 
 Taskbar uses [Robolectric](https://github.com/robolectric/robolectric) as its unit testing framework.  The entire test suite can be run with `./gradlew testFreeDebug`, or you can generate a Jacoco coverage report using `./gradlew jacocoTestFreeDebugUnitTestReport` which will be output to the `app/build/jacoco/jacocoHtml` directory.  If you contribute code improvements such as bug fixes, we recommend writing tests alongside it using Robolectric.
-
-## For Third-Party App Developers
-
-#### Android 10 Desktop Mode support via libtaskbar
-Taskbar can now be included as a library inside any third-party launcher, to quickly and easily add Android 10 Desktop Mode support into your existing launcher with no additional setup.
-
-For more information on including Taskbar inside your application, see the [libtaskbar documentation](https://github.com/farmerbb/libtaskbar/blob/master/README.md).
-
-#### Icon Pack Support
-Taskbar includes support for ADW-style icon packs.  If you are an icon pack developer and would like to include support for applying the icon pack from within your app, simply use the following code:
-
-    Intent intent = new Intent("com.farmerbb.taskbar.APPLY_ICON_PACK");
-    intent.putExtra("android.intent.extra.PACKAGE_NAME", "com.iconpack.name");
-    startActivity(intent);
-
-## Contributors
-
-Pull requests are welcome!  See the [contributor guidelines](https://github.com/farmerbb/Taskbar/blob/master/CONTRIBUTING.md) for more details.
-
-* Mark Morilla (app logo)
-* naofum (Japanese translation)
-* HardSer (Russian translation)
-* OfficialMITX (German translation)
-* Whale Majida (Chinese translation)
-* Mesut Han (Turkish translation)
-* Zbigniew Zienko (Polish translation)
-* utzcoz (Additional Chinese translation, code cleanup + unit testing)
-* RaspberryPiFan (Additional German translation)
-* Diego Sangunietti (Spanish translation)
-* Tommy He (Chinese translation for Desktop Mode)
-* Aaron Dewes (German translation updates)
-* Ingo Brückl (German translation updates)
-
-#### Special Thanks
-* Mishaal Rahman (xda-developers)
-* Jon West (Team Bliss)
-* Chih-Wei Huang (Android-x86)
